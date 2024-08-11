@@ -1,235 +1,37 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone-like Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand portfolio-logo" href="#">R.</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-                <a class="nav-link active text-white" href="#">
-                    Home
-                    <span class="sr-only">(current)</span>
-                </a>
-                <a class="nav-link text-white" href="#about-me-section">About me</a>
-                <a class="nav-link text-white" href="#Skills">Skills</a>
-                <a class="nav-link text-white" href="#Projects">Projects</a>
-                <a class="nav-link text-white" href="#Services">Services</a>
-                <a class="nav-link text-white" href="#ContactMe">Contact Me</a>
-            </div>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="display" readonly>
         </div>
-    </nav>
-    <div class="banner-section-bg-container d-flex flex-column justify-content-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-5 order-1 order-md-2">
-                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-banner-img.png" class="banner-section-image" />
-                </div>
-                <div class="col-12 col-md-7 order-2 order-md-1 d-flex flex-column justify-content-center">
-                    <h1 class="banner-section-heading mb-3">
-                        Hey, I am <span class="person-name">Rajashekar</span>
-                    </h1>
-                    <p class="banner-section-description mb-3">
-                        I am a Btech student.
-                    </p>
-                    <button class="custom-button"><a class="a" href="#ContactMe">Contact Me</a></button>
-
-                </div>
-            </div>
+        <div class="buttons">
+            <button class="btn" data-key="7">7</button>
+            <button class="btn" data-key="8">8</button>
+            <button class="btn" data-key="9">9</button>
+            <button class="btn operator" data-key="/">÷</button>
+            <button class="btn" data-key="4">4</button>
+            <button class="btn" data-key="5">5</button>
+            <button class="btn" data-key="6">6</button>
+            <button class="btn operator" data-key="*">×</button>
+            <button class="btn" data-key="1">1</button>
+            <button class="btn" data-key="2">2</button>
+            <button class="btn" data-key="3">3</button>
+            <button class="btn operator" data-key="-">−</button>
+            <button class="btn" data-key="0">0</button>
+            <button class="btn" data-key=".">.</button>
+            <button class="btn clear" data-key="C">C</button>
+            <button class="btn operator" data-key="+">+</button>
+            <button class="btn equal" data-key="=">=</button>
         </div>
     </div>
-
-    <div class="about-me-section pt-5 pb-5" id="about-me-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 order-1 order-md-2 d-flex flex-column justify-content-center">
-                    <h1 class="about-me-section-sub-heading mb-3">Facts</h1>
-                    <h1 class="about-me-section-heading mb-3">About me</h1>
-                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-about-me-img.png" class="about-me-section-image d-md-none mb-3" />
-                    <p class="about-me-section-description"> My name is G.Rajashekar and i am currently looking for job in frontend development.Currently I am pursuing my btech in INFORMATION TECHNOLOGY at KITSW.<br /><br />I am a dedicated person with a family of four. I enjoy reading, and the knowledge and perspective that my reading gives me have strengthened my teaching skills and presentation abilities.
-                    </p>
-                </div>
-                <div class="col-12 col-md-6 order-2 order-md-1 d-none d-md-block">
-                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-about-me-img.png" class="about-me-section-image" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="skills-section pt-5 pb-5" id="Skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="skills-section-sub-heading mb-3">
-                        Skills :
-                    </h1>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="shadow skills-card text-center mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-html-img.png" class="skills-card-image" />
-                        <h1 class="skills-card-title">HTML</h1>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="shadow skills-card text-center mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-css-img.png" class="skills-card-image" />
-                        <h1 class="skills-card-title">CSS</h1>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="shadow skills-card text-center mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-bootstrap-img.png" class="skills-card-image" />
-                        <h1 class="skills-card-title">Bootstrap</h1>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="shadow skills-card text-center mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-skills-js-img.png" class="skills-card-image" />
-                        <h1 class="skills-card-title">JS</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="projects-section pt-5 pb-5" id="Projects">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="projects-section-sub-heading mb-3">Portfolio</h1>
-                    <h1 class="projects-section-heading">Projects I have done</h1>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="projects-card mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/ocean.jpg" class="projects-card-image ocean" />
-                        <div class="p-3">
-                            <h1 class="projects-card-sub-title mb-3">Web design</h1>
-                            <h1 class="projects-card-title">Tourism Website</h1>
-                            <p class="projects-card-description">
-                                Tourism is a Simple Static Website. We can use this layout for building the other websites...
-                            </p>
-                            <a class="projects-card-link" href="https://rajccbp.ccbp.tech">
-                                Read More
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#cced00" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="projects-card mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-project-2-img.png" class="projects-card-image" />
-                        <div class="p-3">
-                            <h1 class="projects-card-sub-title mb-3">Web design</h1>
-                            <h1 class="projects-card-title">Food Munch</h1>
-                            <p class="projects-card-description">
-                                Food Munch is a simple responsive website where user can simply order tasty and healthy food.
-                            </p>
-                            <a class="projects-card-link" href="https://rajfoodmunch123.ccbp.tech">
-                                Read More
-                                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#cced00" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="services-section pt-5 pb-5" id="Services">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="services-section-sub-heading mb-3">Services</h1>
-                    <h1 class="services-section-heading mb-3">What I do</h1>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="shadow services-card mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-web-design-img.png" class="services-card-image" />
-                        <h1 class="services-card-title mt-2">Static Websites</h1>
-                        <p class="services-card-description">
-                            A Static Website contains Web pages with fixed content.
-                            Each page is developed using HTML and CSS and displays the same information to every visitor.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="services-card mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-web-development-img.png" class="services-card-image" />
-                        <h1 class="services-card-title mt-2">Responsive Web design</h1>
-                        <p class="services-card-description">
-                            Responsive Web design is the approach that suggests that design and development should respond to the user’s behaviour and environment based on screen size, platform and orientation.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="shadow services-card mb-3">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-customize-img.png" class="services-card-image" />
-                        <h1 class="services-card-title mt-2">Customisable Layouts</h1>
-                        <p class="services-card-description">
-                            Customisable sites are templates with set layouts. You may be
-                            able to change photos and colors, but your site will look
-                            similar to many other sites due to the template. The same goes
-                            for...
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-section pt-5" id="ContactMe">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-3 mb-3">
-                    <div class="d-flex flex-row">
-                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/portfolio-about-me-img.png" class="footer-section-image" />
-                        <div class="ml-3">
-                            <h1 class="footer-section-sub-heading">Rajashekar</h1>
-                            <p class="footer-section-text">Frontend Developer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mb-3">
-                    <h1 class="footer-section-sub-heading">Phone No.</h1>
-                    <div>
-                        <i class="fas fa-phone-alt icon"></i>
-                        <span class="footer-section-text ml-2">8465027512</span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mb-3">
-                    <h1 class="footer-section-sub-heading">E-mail</h1>
-                    <div>
-                        <i class="fas fa-envelope icon"></i>
-                        <span class="footer-section-text ml-2">gundarajashekarreddy@gmail.com</span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 mb-3">
-                    <h1 class="footer-section-sub-heading">Address</h1>
-                    <div>
-                        <i class="fas fa-map-marked-alt icon"></i>
-                        <span class="footer-section-text ml-2">kusumachi,khammam</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-section-copyright-container">
-            <i class="fa fa-copyright icon" aria-hidden="true"></i>
-            <span class="footer-section-text">2024 by G.Rajashekar. Created with Bootstrap.</span>
-        </div>
-    </div>
+    <script src="index.js"></script>
 </body>
-
 </html>
